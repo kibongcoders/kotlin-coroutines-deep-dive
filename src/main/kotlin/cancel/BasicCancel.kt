@@ -1,9 +1,8 @@
 package cancel
 
-import coroutine_context.AccessingContextInASuspendingFunction
 import kotlinx.coroutines.*
 
-class StructuredConcurrency {
+class BasicCancel {
 
     suspend fun `Join and Cancel`(): Unit = coroutineScope {
         val job = launch {
@@ -54,6 +53,6 @@ class StructuredConcurrency {
 fun main() = runBlocking {
     //StructuredConcurrency().`Join and Cancel`()
     //StructuredConcurrency().`Not Join and Cancel`()
-    StructuredConcurrency().`CancelAndJoin Function`()
+    BasicCancel().`CancelAndJoin Function`()
 }
 
