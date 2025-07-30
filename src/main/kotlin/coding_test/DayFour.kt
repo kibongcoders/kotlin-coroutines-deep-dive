@@ -22,6 +22,42 @@ class DayFour {
         }
         return answer
     }
+
+    fun test04(ineq: String, eq: String, n: Int, m: Int): Int {
+        if (ineq == ">") {
+            if (eq == "=") {
+                return if (n >= m) 1 else 0;
+            } else {
+                return if (n > m) 1 else 0;
+            }
+        } else {
+            if (eq == "=") {
+                return if (n <= m) 1 else 0;
+            } else {
+                return if (n < m) 1 else 0;
+            }
+        }
+    }
+
+    /*
+    class Solution {
+    fun solution(ineq: String, eq: String, n: Int, m: Int): Int {
+        var answer: Int = 0
+        val op = ineq + eq
+
+        when (op) {
+            "<=" -> answer = if (n <= m) 1 else 0
+            ">=" -> answer = if (n >= m) 1 else 0
+            "<!" -> answer = if (n < m) 1 else 0
+            ">!" -> answer = if (n > m) 1 else 0
+        }
+
+        return answer
+        }
+    }
+    *
+    */
+
 }
 
 fun main() {
