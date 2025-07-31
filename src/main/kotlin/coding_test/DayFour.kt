@@ -40,6 +40,9 @@ class DayFour {
     }
 
     /*
+
+    test 04
+
     class Solution {
     fun solution(ineq: String, eq: String, n: Int, m: Int): Int {
         var answer: Int = 0
@@ -57,6 +60,12 @@ class DayFour {
     }
     *
     */
+
+    fun test05(a: Int, b: Int, flag: Boolean): Int {
+        return if(flag) a + b else a - b
+    }
+
+
 
 }
 
